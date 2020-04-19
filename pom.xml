@@ -4,11 +4,11 @@
 	
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.bookstore</groupId>
-	<artifactId>spring-boot-with-Dockerfile</artifactId>
+	<artifactId>spring-boot-with-dockerfile</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>spring-boot-with-Dockerfile</name>
-	<description>spring-boot-with-Dockerfile</description>
+	<name>spring-boot-with-dockerfile</name>
+	<description>spring-boot-with-dockerfile</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

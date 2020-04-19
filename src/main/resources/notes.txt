@@ -1,0 +1,5 @@
+Local mysql: simple-spring-boot-mysql-config
+http://localhost:8080/bookservice/books
+
+http://simple-springboot-mysql-config-git-fresenius-demo1.apps.cluster-nyc-6154.nyc-6154.example.opentlc.com/bookservice/books
+http://simple-springboot-mysql-config-git-fresenius-demo1.apps.cluster-nyc-6154.nyc-6154.example.opentlc.com/catfactservice/facts

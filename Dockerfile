@@ -1,17 +1,27 @@
-# For Java 8, try this
+# Maven build container 
+
+FROM maven:3.5.2-jdk-8-alpine AS maven_build
+
+COPY pom.xml /tmp/
+
+COPY src /tmp/src/
+
+WORKDIR /tmp/
+
+RUN mvn package
+
+#pull base image
+
 FROM openjdk:8-jdk-alpine
 
-# For Java 11, try this
-#FROM adoptopenjdk/openjdk11:alpine-jre
+#maintainer 
+MAINTAINER  some@email.com 
+#expose port 8080
+EXPOSE 8080
 
-# Refer to Maven build -> finalName
-ARG JAR_FILE=target/spring-boot-with-Dockerfile-0.0.1-SNAPSHOT.jar
+#default command
+CMD java -jar /data/spring-boot-with-Dockerfile-0.0.1-SNAPSHOT.jar
 
-# cd /opt/app
-WORKDIR /opt/app
+#copy hello world to docker image from builder image
 
-# cp target/spring-boot-web.jar /opt/app/app.jar
-COPY ${JAR_FILE} app.jar
-
-# java -jar /opt/app/app.jar
-ENTRYPOINT ["java","-jar","app.jar"]
+#COPY --from=maven_build /tmp/target/spring-boot-with-Dockerfile-0.0.1-SNAPSHOT.jar /tmp/data/spring-boot-with-Dockerfile-0.0.1-SNAPSHOT.jar

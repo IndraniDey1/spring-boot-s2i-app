@@ -10,7 +10,7 @@ It builds your code locally and deployes to openshift. No need for external regi
 
 **Login to openshift using odo and do the following steps
 
-- odo login -u someuser -p someuser. or try odo login <api-url> -username=some -password=some
+- odo login -u someuser -p someuser. or try odo login url -username=some -password=some
 
                   
 **Build and Deploy to opemshift

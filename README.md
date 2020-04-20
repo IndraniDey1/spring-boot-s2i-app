@@ -1,9 +1,12 @@
 ## Overivew 
 
-This is a springboot app which intereacts with a mysql database and also invokes a pubic webservice url. This app is developed to learn openshift deployment mainly but one can learn just how to use springboot with mysql 
+This is a springboot app which intereacts with a mysql database and also invokes a pubic webservice url. This app is developed to learn openshift deployment mainly but one can learn just how to use springboot with mysql.
+
+Main objective is to demonstrate how you can take an existing springboot application and containerize it. For the mysql part needs a bit more configuration that will be provided in a separate blog. You have to create a mysql instance inside openshift and create a database called 'bookstore' with one table called 'book'. If you do not do any mysql setup, app will still run and you can test with the webservice call (catfaceservice).
+
 
 - This app will be used to demonstrate how to create a docker image from raw source from github using S2I tool. 
-- Once the image is built then it will be pushed from local docker registry to an external registry. In this case to quay.io registry.
+- Once the image is built then it will be pushed from local docker registry to an external registry. In this case to quay.io registry. ( suggestion: Get an account in quay.io )
 - Once the image is in quay registry then it will be used to create a new-app in openshift.
 
 

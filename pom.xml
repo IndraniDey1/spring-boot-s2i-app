@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.bookstore</groupId>
-	<artifactId>spring-boot-with-dockerfile</artifactId>
+	<groupId>example.com</groupId>
+	<artifactId>spring-boot-s2i-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>spring-boot-with-dockerfile</name>
-	<description>spring-boot-with-dockerfile</description>
+	<name>spring-boot-s2i-app</name>
+	<description>spring-boot-s2i-app</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

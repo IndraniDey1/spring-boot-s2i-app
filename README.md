@@ -21,7 +21,7 @@ This is a springboot app which intereacts with a mysql database and also invokes
 - s2i build https://github.com/IndraniDey1/spring-boot-s2i-app registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift spring-boot-s2i-app
 - docker images ( verify that new spring-boot-s2i-app image exist)
 - Test the image : docker run -d -p 8080:8080 spring-boot-s2i-app
-- invoke http://://localhost:8080/catfactservice/facts
+- invoke http://localhost:8080/catfactservice/facts
 
 ## Upload the image on a registry ( quay.io in this case)
 
@@ -38,7 +38,7 @@ This is a springboot app which intereacts with a mysql database and also invokes
 - push the container image to a quay
     - docker push quay.io/<username>/<reponame>
    
-##Pull the image from registry and deploy on openshift
+## Pull the image from registry and deploy on openshift
 
 - An openshift cluster should be running
 - Create a new project : oc new-project s2i-demo

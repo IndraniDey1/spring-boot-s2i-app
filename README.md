@@ -55,10 +55,10 @@ This is a springboot app which intereacts with a mysql database and also invokes
  - create configmap: Change one of the property
    - oc create configmap spring-boot-s2i-app-cm --from-literal cat-fact.url="https://catfact.ninja/facts"
 
- - Verify : oc describe cm/springboot-mysql-config-cm
+ - Verify : oc describe cm/spring-boot-s2i-cm
 
  - create secrets  : use the mysql username and password and create secrets
-   - create a file named springboot-mysql-config.sec    
+   - create a file named spring-boot-s2i-app.sec    
    - spring.datasource.username=root spring.datasource.password=tcT7mYOQYLqg804e
    - oc create secret generic spring-boot-s2i-app-sec --from-file spring-boot-s2i-app.sec 
    - verify : oc get secret/spring-boot-s2i-app-sec -o json

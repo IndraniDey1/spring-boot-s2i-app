@@ -4,11 +4,18 @@ Please learn more details from here: https://docs.openshift.com/container-platfo
 
 It builds your code locally and deployes to openshift. No need for external registry or code must be in git. Once the application is in openshift you can login to openshift and do any manipulation. Stay tuned for other features of ODO tool
 
+## Install odo
+- curl -L https://github.com/openshift/odo/raw/master/scripts/installer.sh | bash
 
-**Loging to openshift using odo and do the following steps
 
-- odo login -u <username> -p <password>
-- odo project create <project name>  ( this will create a project in openshift)
+**Login to openshift using odo and do the following steps
+
+- odo login -u someuser -p someuser. or try odo login <api-url> -username=some -password=some
+
+                  
+**Build and Deploy to opemshift
+
+- odo project create project some-project-name  ( this will create a project in openshift)
 - Go to your code base and issue this command
   - odo create java ( since this is a java project, if nodejs project then do oc create nodejs )
 - odo push
@@ -16,4 +23,10 @@ It builds your code locally and deployes to openshift. No need for external regi
 - odo push
 - odo url list
 - curl <url>
+  
+-   
+That is it. 
+Again this is all in one shot. Good but as a developer you need to know the manual process in order to debug issue. Therefore look at the project from console and using cli tool to understand what was deployed
+
+Enjoy !!!
 

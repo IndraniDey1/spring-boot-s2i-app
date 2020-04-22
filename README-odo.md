@@ -15,8 +15,8 @@ It builds your code locally and deployes to openshift. No need for external regi
                   
 **Build and Deploy to opemshift
 
-- odo project create project some-project-name      ( this will create a project in openshift)
 - Go to your code base and issue these commands
+  - odo project create project some-project-name      ( this will create a project in openshift)
   - odo create java            ( since this is a java project, if nodejs project then do oc create nodejs )
   - odo push
   - odo url create --port 8080

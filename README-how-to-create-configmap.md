@@ -1,4 +1,4 @@
-## Update Deployment Config with ConfigMap and Secrets
+## Update Deployment Config with ConfigMap
 
 Steps are you create a configmap and then inject that configmap into the openshift deployment config. There are two ways to build the configmap. One is that you specify the properties on command line one at a time or you provided a file like application.properties file and create a configmap that way. 
 

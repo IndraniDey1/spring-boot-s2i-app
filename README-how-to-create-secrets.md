@@ -5,7 +5,8 @@ Secrets are used to secure sensitive data that goes into the application.propert
 For this application create secrets for the mysql username and password.
 
 - create a file named spring-boot-s2i-app.sec
-  - spring.datasource.username=root spring.datasource.password=tcT7mYOQYLqg804e
+  - spring.datasource.username=root 
+  - spring.datasource.password=
 - create secrets using the .sec file
   - oc create secret generic spring-boot-s2i-app-sec --from-file spring-boot-s2i-app.sec
 - verify 

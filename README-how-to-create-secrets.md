@@ -1,5 +1,6 @@
 ## Update deployment config with secrets
 Secrets are used to secure sensitive data that goes into the application.properties file. You can create secrets for the credential use to access some components like database, queues, topics etc
+read more https://docs.openshift.com/container-platform/4.3/nodes/pods/nodes-pods-secrets.html
 
 ## how to create secrets
 For this application create secrets for the mysql username and password.

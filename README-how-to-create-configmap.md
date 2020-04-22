@@ -19,5 +19,7 @@ Steps are you create a configmap and then inject that configmap into the openshi
   - Verify 
     - oc describe cm/spring-boot-s2i-cm1
   - Inject the configmap into deployment config
-    - oc set env dc/spring-boot-s2i-app --from configmap/spring-boot-s2i-cm1
+    - oc set volume dc/spring-boot-s2i-app --add -t configmap -m /opt/app-root/secure --name spring-boot-s2i-cm1-vol --configmap-name name spring-boot-s2i-cm1
+
+   
 

@@ -16,6 +16,6 @@ For this application create secrets for the mysql username and password.
   - oc set volume dc/spring-boot-s2i-app --add -t secret -m /opt/app-root/secure --name spring-boot-s2i-app-sec-vol --secret-name spring-boot-s2i-app-sec
 
 
-## Trigget a new deployment to verify the changes
+## Trigger a new deployment to verify the changes
   - oc rollout latest dc/spring-boot-s2i-app
 

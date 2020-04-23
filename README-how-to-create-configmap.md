@@ -21,5 +21,13 @@ Steps are you create a configmap and then inject that configmap into the openshi
   - Inject the configmap into deployment config
     - oc set volume dc/spring-boot-s2i-app --add -t configmap -m /opt/app-root/secure --name spring-boot-s2i-cm1-vol --configmap-name name spring-boot-s2i-cm1
 
-   
+ ## Update a configmap 
+  Scenario:  you need to delete or add an item from confifmap. 
+  Answer: You cannot update configmap directly. You have to replace the configmap.
+  Here are the steps:
+  1. Make the change in your properties file. For example in application.properties file. Add or delete a property. 
+  2. oc create configmap spring-boot-s2i-app-cm1 --from-file fresenius/application.properties --dry-run -o yaml | oc replace -f -
+  
+  
+  
 

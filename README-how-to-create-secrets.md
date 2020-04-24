@@ -22,10 +22,12 @@ For this application create secrets for the mysql username and password.
 
 ## Alternate way to create secret in crc environment
  - create a .yml file with user name and password information in it
- - Please see the example under example/security-example.yml
+   - Makesure username and password are in base64 format. You can use some online base64 encoder to do the encoding
+   - Please see the example under example/security-example.yml
+ 
  - oc create -f secret-example.yml
  - oc set env dc/myapp --from mysecret
 
 ## Trigger a new deployment to verify the changes
-  - oc rollout latest dc/spring-boot-s2i-app
+  - oc rollout latest dc/myapp
 

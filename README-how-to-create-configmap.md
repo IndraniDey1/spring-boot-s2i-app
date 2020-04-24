@@ -30,7 +30,7 @@ Steps are you create a configmap and then inject that configmap into the openshi
   
 ## Alternate way of creating Configmap in crc environment
 
- - Convert your application.properties file into a .yml file. Please see configmap.yml under the folder example
+ - Convert your application.properties file into a .yml file. Please see examples/configmap-example.yml 
  - oc create -f configmap.yml file
  - oc set env dc/myapp --from configmap/myconfigmap
  

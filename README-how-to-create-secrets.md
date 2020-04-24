@@ -13,7 +13,11 @@ For this application create secrets for the mysql username and password.
 - verify 
   - oc get secret/spring-boot-s2i-app-sec -o json
   
-## Inject secret into deployment config
+## Inject secret into deployment config in crc environment 
+
+- oc set env dc/spring-boot-s2i-app --from secret/spring-boot-s2i-app-sec
+
+## Inject secret into deployment config in higher environment
   - oc set volume dc/spring-boot-s2i-app --add -t secret -m /opt/app-root/secure --name spring-boot-s2i-app-sec-vol --secret-name spring-boot-s2i-app-sec
 
 

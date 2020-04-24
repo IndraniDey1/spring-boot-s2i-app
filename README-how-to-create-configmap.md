@@ -28,6 +28,10 @@ Steps are you create a configmap and then inject that configmap into the openshi
   1. Make the change in your properties file. For example in application.properties file. Add or delete a property. 
   2. oc create configmap spring-boot-s2i-app-cm1 --from-file fresenius/application.properties --dry-run -o yaml | oc replace -f -
   
-  
-  
+## Alternate way of creating Configmap in crc environment
 
+ - Convert your application.properties file into a .yml file. Please see configmap.yml under the folder example
+ - oc create -f configmap.yml file
+ - oc set env dc/myapp --from configmap/myconfigmap
+ 
+ 

@@ -18,7 +18,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 @Service
-@PropertySource("classpath:application.properties")
+//@PropertySource("classpath:application.properties")
 public class CatFactService {
 	
 	private static final Logger logger = LogManager.getLogger(CatFactService.class);

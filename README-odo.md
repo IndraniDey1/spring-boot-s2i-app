@@ -5,8 +5,9 @@ Please learn more details from here: https://docs.openshift.com/container-platfo
 It builds your code locally and deployes to openshift. No need for external registry or code must be in git. Once the application is in openshift you can login to openshift and do any manipulation. Stay tuned for other features of ODO tool
 
 ## Install odo
-- curl -L https://github.com/openshift/odo/raw/master/scripts/installer.sh | bash
-
+- Installing odo on macOS (Binary installation, you may have to use sudo for the commands)
+   - curl -L https://mirror.openshift.com/pub/openshift-v4/clients/odo/latest/odo-darwin-amd64 -o /usr/local/bin/odo
+   - chmod +x /usr/local/bin/odo.   
 
 **Login to openshift using odo and do the following steps
 

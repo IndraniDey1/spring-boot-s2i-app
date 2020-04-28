@@ -31,7 +31,7 @@ It builds your code locally and deployes to openshift. No need for external regi
    - mkdir mycomponents
    - cd mycomonent
    - Copy your source codes under this direcotory for all the components. For example : front-end-codo-dir, backend-code-dir
-   - odo lobing -u username - p password api-url
+   - odo login -u username - p password api-url
    - ode project create
 
  **Backend-code deploy
@@ -42,8 +42,8 @@ It builds your code locally and deployes to openshift. No need for external regi
    
  **Front-end code deploy
    - cd to front-end-code-dir
-   - oc create java
-   - odo push ( this will push the backend code. no need to specify port)
+   - oc create nodejs
+   - odo push ( this will push the frontend code. no need to specify port)
 
 
    - for more information please see this url https://docs.openshift.com/container-platform/4.3/cli_reference/openshift_developer_cli/creating-a-multicomponent-application-with-odo.html

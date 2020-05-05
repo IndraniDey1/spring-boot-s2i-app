@@ -20,7 +20,14 @@ For this application create secrets for the mysql username and password.
 ## Inject secret into deployment config in higher environment
   - oc set volume dc/spring-boot-s2i-app --add -t secret -m /opt/app-root/secure --name spring-boot-s2i-app-sec-vol --secret-name spring-boot-s2i-app-sec
 
+## Alternate way to create secret in crc environment
+ - create a .yml file with user name and password information in it
+   - Makesure username and password are in base64 format. You can use some online base64 encoder to do the encoding
+   - Please see the example under example/secret-example.yml
+ 
+ - oc create -f secret-example.yml
+ - oc set env dc/myapp --from mysecret
 
 ## Trigger a new deployment to verify the changes
-  - oc rollout latest dc/spring-boot-s2i-app
+  - oc rollout latest dc/myapp
 

@@ -28,7 +28,7 @@ public class CatFactService {
 
 	public String getCatFacts() throws IOException, JSONException {
 		JSONObject json = readJsonFromUrl(url);
-		logger.debug(json.toString());
+		logger.info(json.toString());
 		return json.toString();
 	}
 
@@ -47,6 +47,7 @@ public class CatFactService {
 			BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
 			String jsonText = readAll(rd);
 			JSONObject json = new JSONObject(jsonText);
+			
 			return json;
 		} finally {
 			is.close();

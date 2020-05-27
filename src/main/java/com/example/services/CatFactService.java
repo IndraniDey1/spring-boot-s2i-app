@@ -29,6 +29,7 @@ public class CatFactService {
 	public String getCatFacts() throws IOException, JSONException {
 		JSONObject json = readJsonFromUrl(url);
 		logger.info(json.toString());
+		System.out.println("Test console log:" + json.toString());
 		return json.toString();
 	}
 

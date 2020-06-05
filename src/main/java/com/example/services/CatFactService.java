@@ -25,11 +25,15 @@ public class CatFactService {
 
 	@Value("${cat-fact.url}")
 	private String url;
+	
+	@Value("${TEST_STRING}")
+	private String  testString;
 
 	public String getCatFacts() throws IOException, JSONException {
 		JSONObject json = readJsonFromUrl(url);
 		logger.info(json.toString());
 		System.out.println("Test console log:" + json.toString());
+		logger.info("Environment value=" + testString);
 		return json.toString();
 	}
 

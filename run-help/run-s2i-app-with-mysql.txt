@@ -1,0 +1,22 @@
+mysql-setup
+
+1. new-app-mysql.bat
+2. Get the pod name and set the value in the mysql-setup-for-s2i-app.bat
+3. mysql-setup-for-s2i-app.bat
+4. if issue with grant then 
+    oc resh mysql pod
+	mysql -u root
+	GRANT ALL PRIVILEGES ON *.* TO 'user1'@'%';
+	
+
+s2i-app setup
+1. create -f s2i-app.cm
+2. create -f s2i-app.sec
+3. delete the .odo directory
+4. create the component using IntelliJ ide
+5. oc set env dc/s2i-app --from configmap/s2i-cm
+6. oc set env dc/s2i-app --from secret/s2i-sec
+7. oc expose svc/s2i-app
+8. oc get route
+9. test : http://<route>/catfactservice/facts
+          http://<route>/bookservice/books

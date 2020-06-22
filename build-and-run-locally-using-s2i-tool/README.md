@@ -16,6 +16,7 @@
 - docker images ( verify that new spring-boot-s2i-app image exist)
 - docker run -d -p 8080:8080 spring-boot-s2i-app
 curl http://localhost:8080/catfactservice/facts
+curl http://localhost:8080/bookservice/books
 
 Enjoy !!!
 

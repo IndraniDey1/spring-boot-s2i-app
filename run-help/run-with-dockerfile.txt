@@ -1,7 +1,0 @@
-docker images
-docker build -t="s2i-app-dockerfile" .
-docker run -p 8080:8080 -it --rm s2i-app-dockerfile
-
-docker login quay.io -u username -p password
-docker push s2i-app-dockerfile:latest quay.io/<username>/<reponame>
-

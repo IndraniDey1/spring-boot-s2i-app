@@ -1,6 +1,0 @@
-template-for-s2i-app.txt
-
-create a directory 
-mkdir template-work
-
-oc get -o yaml --export is > /home/idey-redhat.com/demo/s2i-app/template-work/is-clean.yaml

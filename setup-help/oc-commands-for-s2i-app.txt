@@ -25,6 +25,9 @@ oc adm policy add-role-to-user admin developer -n chairside-notification-service
 
 
 oc delete all --selector app=simple-spring-boot-s2i-app
+
+ oc get images -n openshift | grep quay
+
 Docker:
 docker imagee prune
 docker container stop 77e5db0cc0bf

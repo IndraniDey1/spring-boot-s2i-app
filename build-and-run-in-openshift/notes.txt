@@ -1,0 +1,7 @@
+There are two components in ths app.
+--mysql
+--spring-boot-s2i-app
+
+1. First start the mysql. Please go to mysql-run direcotry and run mysql-run.bat and follow the direction in the notes.txt file
+
+2. Second go to s2i-app-run directory and follow the direction in the notest.txt file

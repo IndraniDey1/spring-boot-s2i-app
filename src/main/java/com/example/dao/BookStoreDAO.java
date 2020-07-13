@@ -43,6 +43,10 @@ public class BookStoreDAO implements IBookStoreDAO {
 	 */
 	@Override
 	public Book createBook(Book book) {
+		//Backward compatible
+		if (book.getPublishYear() == null) {
+			book.setPublishYear("9999");
+		}
 		entityManager.persist(book);
 		Book b = getLastInsertedBook();
 		return b;

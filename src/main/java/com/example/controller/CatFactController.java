@@ -36,4 +36,20 @@ public class CatFactController {
 		}
 		return new ResponseEntity<String>(facts, HttpStatus.OK);
 	}
+	
+	@GetMapping("randomfacts")
+	public ResponseEntity<String> getRandomFacts() {
+
+		String facts = null;
+		try {
+			facts = service.getRandomFacts();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return new ResponseEntity<String>(facts, HttpStatus.OK);
+	}
 }

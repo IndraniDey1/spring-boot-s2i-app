@@ -25,7 +25,7 @@ public class BookStoreDAO implements IBookStoreDAO {
 	@Override
 	public List<Book> getBooks() {
 		
-		String hql = "select id, author, category, name, pages, price, publication FROM Book as atcl ORDER BY atcl.id";
+		String hql = "select id, author, category, name, pages, price, publication, year FROM Book as atcl ORDER BY atcl.id";
 		return (List<Book>) entityManager.createQuery(hql).getResultList();
 	}
 

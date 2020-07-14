@@ -17,3 +17,4 @@ data:
   logging.level.org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 
   cat-fact.url: https://cat-fact.herokuapp.com/facts
+  cat-random-fact=https://meowfacts.herokuapp.com/

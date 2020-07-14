@@ -37,8 +37,8 @@ public class Book implements Serializable {
 	@Column(name="price")
 	private int price;
 	
-	@Column(name="publisYear")
-	private String publishYear;
+	@Column(name="year")
+	private String year;
 
 	public int getId() {
 		return id;
@@ -96,11 +96,11 @@ public class Book implements Serializable {
 		this.price = price;
 	}
 
-	public String getPublishYear() {
-		return publishYear;
+	public String getYear() {
+		return year;
 	}
 
-	public void setPublishYear(String publishYear) {
-		this.publishYear = publishYear;
+	public void setYear(String year) {
+		this.year = year;
 	}
 }

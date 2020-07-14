@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: mysecret
+  name: s2i-sec
   type: Opaque
 data:
-  spring.datasource.username: UFRSQUs=
+  spring.datasource.username: dXNlcjE=
   spring.datasource.password: cGFzc3dvcmQ=

@@ -10,6 +10,6 @@ CREATE TABLE IF NOT EXISTS `book` (
   `pages` int(11) DEFAULT NULL,
   `price` int(11) DEFAULT NULL,
   `publication` varchar(255) DEFAULT NULL,
+  `year` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
-~                                                          
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;                                                          

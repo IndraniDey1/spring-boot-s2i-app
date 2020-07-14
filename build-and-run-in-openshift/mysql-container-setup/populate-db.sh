@@ -1,4 +1,4 @@
-mpod=mysql-1-cj68h
+mpod=mysql-1-qnv9d
 echo "Copying setup files into pod..."
 oc cp create-book-table.sql %mpod%:/tmp/create-book-table.sql
 oc cp insert-book-data.sql %mpod%:/tmp/insert-book-data.sql

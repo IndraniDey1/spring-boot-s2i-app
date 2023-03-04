@@ -5,7 +5,7 @@ Steps are you create a configmap and then inject that configmap into the openshi
 ## Create a configmap and add properties using 'from-literal'
 
   - Create the configmap
-    - oc create configmap spring-boot-s2i-app-cm --from-literal cat-fact.url="https://catfact.ninja/facts"
+    - oc create configmap spring-boot-s2i-app-cm --from-literal cat-fact.url="docs/api-docs.json"
   - Verify 
     - oc describe cm/spring-boot-s2i-cm
   - Inject the configmap into deployment config
